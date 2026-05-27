@@ -123,10 +123,7 @@
     }
 
     .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 28px;
-      align-items: center;
+      display: block;
     }
 
     .eyebrow {
@@ -196,123 +193,6 @@
       font-size: .95rem;
     }
 
-    .phone-stage {
-      position: relative;
-      min-height: 700px;
-    }
-
-    .glow,
-    .glow-two,
-    .glow-three {
-      position: absolute;
-      border-radius: 999px;
-      filter: blur(14px);
-      opacity: .4;
-      z-index: 0;
-    }
-    .glow { width: 240px; height: 240px; background: #ffb778; top: 0; right: 40px; }
-    .glow-two { width: 220px; height: 220px; background: #ffd2ac; bottom: 120px; left: 10px; }
-    .glow-three { width: 160px; height: 160px; background: #f97316; top: 210px; left: 30px; }
-
-    .phone {
-      position: absolute;
-      width: 290px;
-      background: #fff;
-      border: 1px solid rgba(251,133,44,0.18);
-      border-radius: 30px;
-      box-shadow: 0 26px 60px rgba(17,24,39,.15);
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .phone-bar {
-      height: 12px;
-      background: linear-gradient(90deg, var(--primary), #ffb76f);
-    }
-
-    .phone-inner { padding: 18px; }
-    .phone-title { font-size: 17px; font-weight: 800; margin-bottom: 14px; }
-
-    .screen-card {
-      border: 1px solid rgba(251,133,44,0.14);
-      border-radius: 22px;
-      padding: 16px;
-      background: linear-gradient(180deg, #fff8f1 0%, #ffffff 100%);
-    }
-
-    .score-card {
-      background: linear-gradient(135deg, var(--primary) 0%, #ffad66 100%);
-      color: #fff;
-      min-height: 180px;
-      position: relative;
-      overflow: hidden;
-    }
-    .score-card h3 {
-      margin: 0;
-      font-size: 30px;
-      line-height: 1;
-      font-weight: 900;
-      max-width: 180px;
-    }
-    .score-card p {
-      margin: 12px 0 0;
-      font-size: 13px;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      opacity: .92;
-    }
-    .score-badge {
-      position: absolute;
-      bottom: 16px;
-      left: 16px;
-      right: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255,255,255,0.16);
-      backdrop-filter: blur(8px);
-      border-radius: 18px;
-      padding: 14px 16px;
-    }
-    .verified {
-      background: #fff;
-      color: var(--primary-dark);
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
-    .mini-list {
-      display: grid;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .mini-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 14px;
-      border-radius: 16px;
-      background: #fff;
-      border: 1px solid rgba(251,133,44,0.10);
-      font-weight: 700;
-      color: #374151;
-    }
-
-    .mini-tag {
-      padding: 6px 10px;
-      background: #fff3e8;
-      color: var(--primary-dark);
-      border-radius: 999px;
-      font-size: .8rem;
-      font-weight: 800;
-    }
-
-    .phone-a { top: 20px; right: 24px; }
-    .phone-b { top: 260px; left: 10px; }
 
     section { padding: 82px 0; }
 
@@ -528,22 +408,12 @@
     }
 
     @media (max-width: 980px) {
-      .hero-grid,
       .grid-3,
       .grid-2,
       .steps,
       .footer-grid,
       .floating-bar {
         grid-template-columns: 1fr;
-      }
-
-      .hero-grid {
-        display: block;
-      }
-
-      .phone-stage {
-        min-height: 760px;
-        margin-top: 28px;
       }
 
       .floating-bar {
@@ -574,12 +444,6 @@
 
       .hero { padding-top: 34px; }
       .hero-stats { grid-template-columns: 1fr; }
-      .phone {
-        width: min(100%, 290px);
-      }
-      .phone-a { position: relative; top: auto; right: auto; margin-left: auto; }
-      .phone-b { position: relative; top: auto; left: auto; margin-top: 18px; }
-      .phone-stage { min-height: auto; }
       section { padding: 62px 0; }
       .privacy { padding: 22px; }
       footer { padding-bottom: 150px; }
@@ -594,10 +458,10 @@
         <span>MeraCash</span>
       </a>
       <nav class="menu" aria-label="Primary navigation">
-        <a class="active" href="#home">首页 | Home</a>
-        <a href="#about">关于我们 | About Us</a>
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About Us</a>
         <a href="#qa">Q&amp;A</a>
-        <a href="#privacy">隐私政策 | Privacy Policy</a>
+        <a href="#privacy">Privacy Policy</a>
       </nav>
     </div>
   </header>
@@ -608,7 +472,7 @@
         <div>
           <div class="eyebrow">Built for India · Free Credit Insights</div>
           <h1>MeraCash — Know your credit score, know your power.</h1>
-          <p class="lead"><strong>中文：</strong>MeraCash —— 免费查印度信用分，财务状况自己说了算。<br><strong>English:</strong> MeraCash gives you the clearest picture of your financial health. Check your credit report, understand your borrowing power, and calculate EMIs — no fees, no fluff, just facts.</p>
+          <p class="lead">MeraCash gives you the clearest picture of your financial health. Check your credit report, understand your borrowing power, and calculate EMIs — no fees, no fluff, just facts.</p>
           <div class="hero-actions">
             <a class="cta" href="#features">Explore Features</a>
             <a class="ghost" href="#steps">How It Works</a>
@@ -616,62 +480,15 @@
           <div class="hero-stats">
             <div class="stat">
               <strong>Credit report</strong>
-              <span>查完整信用报告，还能看懂重点。</span>
+              <span>Get the full picture and understand the important parts fast.</span>
             </div>
             <div class="stat">
               <strong>Borrowing power</strong>
-              <span>收入、负债、可贷额度一眼清楚。</span>
+              <span>See income, debt, and safe loan capacity at a glance.</span>
             </div>
             <div class="stat">
               <strong>EMI clarity</strong>
-              <span>不同贷款方案直接横向对比。</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="phone-stage" aria-hidden="true">
-          <div class="glow"></div>
-          <div class="glow-two"></div>
-          <div class="glow-three"></div>
-
-          <div class="phone phone-a">
-            <div class="phone-bar"></div>
-            <div class="phone-inner">
-              <div class="phone-title">Credit Snapshot</div>
-              <div class="screen-card score-card">
-                <h3>Score 782</h3>
-                <p>Strong profile</p>
-                <div class="score-badge">
-                  <div>
-                    <strong>Eligible EMI</strong><br>
-                    ₹12,450 / month
-                  </div>
-                  <span class="verified">FREE CHECK</span>
-                </div>
-              </div>
-              <div class="mini-list">
-                <div class="mini-item"><span>Credit Utilisation</span><span class="mini-tag">Healthy</span></div>
-                <div class="mini-item"><span>Repayment History</span><span class="mini-tag">On Track</span></div>
-                <div class="mini-item"><span>Loan Capacity</span><span class="mini-tag">₹4.8L</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="phone phone-b">
-            <div class="phone-bar"></div>
-            <div class="phone-inner">
-              <div class="phone-title">EMI Comparison</div>
-              <div class="screen-card">
-                <div class="mini-list">
-                  <div class="mini-item"><span>12 months</span><strong>₹8,240</strong></div>
-                  <div class="mini-item"><span>18 months</span><strong>₹5,930</strong></div>
-                  <div class="mini-item"><span>24 months</span><strong>₹4,780</strong></div>
-                </div>
-              </div>
-              <div class="mini-list">
-                <div class="mini-item"><span>Income Strength</span><span class="mini-tag">Stable</span></div>
-                <div class="mini-item"><span>Debt Load</span><span class="mini-tag">Moderate</span></div>
-              </div>
+              <span>Compare loan options side by side before you commit.</span>
             </div>
           </div>
         </div>
@@ -693,25 +510,22 @@
         <div class="section-head">
           <div class="label">Product Features</div>
           <h2>Three tools. One app. Zero guesswork.</h2>
-          <p>从查信用，到看财务能力，再到算贷款月供，MeraCash 把最关键的事放在一个清楚、直接、免费可用的体验里。</p>
+          <p>From credit reports to financial capacity analysis to EMI planning, MeraCash puts the essentials into one clear, direct, and free experience.</p>
         </div>
         <div class="grid-3">
           <article class="card">
             <div class="icon">01</div>
-            <h3>信用报告查询 | Credit Report Check</h3>
-            <p class="cn">完整信用报告一键获取，附带人话版解读。</p>
+            <h3>Credit Report Check</h3>
             <p class="en">Pull your full report and actually make sense of it.</p>
           </article>
           <article class="card">
             <div class="icon">02</div>
-            <h3>财务能力分析 | Financial Capacity Analysis</h3>
-            <p class="cn">收入多少、负债多少、还能贷多少，算得明明白白。</p>
+            <h3>Financial Capacity Analysis</h3>
             <p class="en">See what you earn, what you owe, and what you can safely borrow.</p>
           </article>
           <article class="card">
             <div class="icon">03</div>
-            <h3>贷款月供计算 | Loan EMI Calculator</h3>
-            <p class="cn">不同贷款方案，月供直接比，选最划算的那个。</p>
+            <h3>Loan EMI Calculator</h3>
             <p class="en">Run different loan scenarios and pick the one that fits your pocket.</p>
           </article>
         </div>
@@ -723,25 +537,22 @@
         <div class="section-head">
           <div class="label">Why MeraCash</div>
           <h2>Fast, free, and built to earn trust.</h2>
-          <p>金融工具不该复杂，也不该躲着藏着收费。这个方向我做成了更像转化型官网该有的节奏：先建立信任，再讲能力，再讲安全。</p>
+          <p>A financial tool should feel useful, transparent, and trustworthy. This section is built to quickly establish confidence around cost, speed, and security.</p>
         </div>
         <div class="grid-3">
           <article class="card">
             <div class="icon">₹</div>
-            <h3>完全免费 | Completely Free</h3>
-            <p class="cn">查报告不要钱，也没有任何隐藏费用。</p>
+            <h3>Completely Free</h3>
             <p class="en">Zero rupees. Zero surprises. Just free access.</p>
           </article>
           <article class="card">
             <div class="icon">⚡</div>
             <h3>快速准确 | Fast &amp; Accurate</h3>
-            <p class="cn">几分钟出结果，不等不拖，靠谱好用。</p>
             <p class="en">Fast enough for real life. Accurate enough to trust.</p>
           </article>
           <article class="card">
             <div class="icon">🔒</div>
-            <h3>安全加密 | Secure Encryption</h3>
-            <p class="cn">你的信息，全程加密，除了你谁也看不到。</p>
+            <h3>Secure Encryption</h3>
             <p class="en">Your data stays yours — locked down tight from the moment you sign in.</p>
           </article>
         </div>
@@ -752,26 +563,23 @@
       <div class="container">
         <div class="section-head">
           <div class="label">Simple 3-Step Flow</div>
-          <h2>📲 简单三步，获取信用报告</h2>
-          <p>没有绕路，没有复杂表单。就是一个清楚、快速、适合转化的 onboarding 逻辑。</p>
+          <h2>Get your credit report in 3 simple steps</h2>
+          <p>A clean onboarding flow: quick, direct, and easy to understand.</p>
         </div>
         <div class="steps">
           <article class="step">
             <div class="step-num">1</div>
-            <h3>下载应用 | Download the app</h3>
-            <p class="cn">下载应用，准备开始你的免费信用查看。</p>
+            <h3>Download the app</h3>
             <p class="en">Install MeraCash and start your free credit check in minutes.</p>
           </article>
           <article class="step">
             <div class="step-num">2</div>
-            <h3>填基本信息 | Tell us a little about yourself</h3>
-            <p class="cn">填写基础资料，用来生成更准确的财务分析结果。</p>
+            <h3>Tell us a little about yourself</h3>
             <p class="en">Share a few basic details so we can build a clearer picture of your credit profile.</p>
           </article>
           <article class="step">
             <div class="step-num">3</div>
-            <h3>看信用报告 | See your credit report instantly</h3>
-            <p class="cn">报告、能力分析、EMI 对比，一次看全。</p>
+            <h3>See your credit report instantly</h3>
             <p class="en">View your report, financial capacity insights, and EMI options instantly.</p>
           </article>
         </div>
@@ -783,22 +591,19 @@
         <div class="section-head">
           <div class="label">About Us</div>
           <h2>Built by a fintech team that hates confusion.</h2>
-          <p>关于公司和愿景这部分，我做成更可信的“品牌说明区”，不只是堆文案。</p>
+          <p>This section is designed as a clearer brand trust block, not just a wall of company copy.</p>
         </div>
         <div class="grid-3">
           <article class="card">
-            <h3>公司介绍 | Company Introduction</h3>
-            <p class="cn">MeraCash 由 KALAVRITI PRIVATE LIMITED 运营。我们是一帮做金融科技的人，只想给印度用户做一件简单的事：让信用管理和财务分析，不再麻烦、不再贵、不再看不懂。</p>
+            <h3>Company Introduction</h3>
             <p class="en">MeraCash is built by KALAVRITI PRIVATE LIMITED. We’re a fintech team on a simple mission — make credit management and financial analysis effortless, affordable, and actually useful.</p>
           </article>
           <article class="card">
-            <h3>公司愿景 | Our Vision</h3>
-            <p class="cn">我们想让每个普通人都能看懂自己的信用，用好自己的信用。信用不该是少数人的特权。</p>
+            <h3>Our Vision</h3>
             <p class="en">We believe good credit shouldn’t be a mystery or a privilege. Our vision is to put financial power back where it belongs — in your hands.</p>
           </article>
           <article class="card">
-            <h3>什么是良好的印度信用评分 | Good Credit in India</h3>
-            <p class="cn">印度信用分通常从300到900。750分以上算“优秀选手”，贷款时更容易拿到低利率和好条件。</p>
+            <h3>Good Credit in India</h3>
             <p class="en">In India, 750+ is the magic number. Hit that, and lenders are more likely to offer you lower interest rates and better terms.</p>
           </article>
         </div>
@@ -810,37 +615,31 @@
         <div class="section-head">
           <div class="label">Q&amp;A</div>
           <h2>Questions people actually ask before they trust a credit app.</h2>
-          <p>我把这块保留成清晰 FAQ 区，兼顾用户信任和 Google Play 审核常见关注点。</p>
+          <p>A straightforward FAQ block focused on trust and common decision-making questions.</p>
         </div>
         <div class="faq-list">
           <article class="faq-item">
-            <h3>如何提高我的信用评分？ | How can I improve my credit score?</h3>
-            <p class="cn">账单别拖、月供别晚；信用卡别刷太狠；别隔三差五就申请贷款或信用卡。</p>
+            <h3>How can I improve my credit score?</h3>
             <p class="en">Pay on time, keep your credit card balance low, and don’t go on an application spree. Small habits, big changes.</p>
           </article>
           <article class="faq-item">
-            <h3>查询信用报告会影响我的信用分吗？ | Will checking my credit report affect my score?</h3>
-            <p class="cn">一点都不会。你自己查属于“软查询”，就像照镜子，镜子不会改变你的样子。</p>
+            <h3>Will checking my credit report affect my score?</h3>
             <p class="en">Nope. Self-checks are soft inquiries. They’re like looking at your own report card — it doesn’t change the grade.</p>
           </article>
           <article class="faq-item">
-            <h3>信用评分的正常范围是多少？ | What is the normal range for a credit score?</h3>
-            <p class="cn">300–900之间，越高越好。600多分算一般，700以上算不错，750以上就稳了。</p>
+            <h3>What is the normal range for a credit score?</h3>
             <p class="en">300 to 900. Think of it this way: below 600 needs work, 700+ is solid, and 750+ is where lenders smile.</p>
           </article>
           <article class="faq-item">
-            <h3>信用报告多久更新一次？ | How often is my credit report updated?</h3>
-            <p class="cn">大约一个月更新一次。常回来看看，别错过变化。</p>
+            <h3>How often is my credit report updated?</h3>
             <p class="en">Roughly once a month. Check in regularly so you’re never out of the loop.</p>
           </article>
           <article class="faq-item">
-            <h3>贷款申请被拒的常见原因有哪些？ | What are common reasons for loan rejection?</h3>
-            <p class="cn">分太低、债太多、收入证明不够硬、或者申请表填得有问题。</p>
+            <h3>What are common reasons for loan rejection?</h3>
             <p class="en">Low score, high debt, weak income proof, or even small mistakes on your application — these trip people up all the time.</p>
           </article>
           <article class="faq-item">
-            <h3>MeraCash 安全可靠吗？ | Is MeraCash safe and trustworthy?</h3>
-            <p class="cn">安全。银行级别的加密，不是随便说说的那种。</p>
+            <h3>Is MeraCash safe and trustworthy?</h3>
             <p class="en">100% secure. We use bank-grade encryption — not a marketing line, but real protection.</p>
           </article>
         </div>
@@ -852,7 +651,7 @@
         <div class="section-head">
           <div class="label">Privacy Policy</div>
           <h2>Privacy Policy</h2>
-          <p>完整隐私协议已放入页面，方便直接交付或继续拆成独立页面。</p>
+          <p>Full privacy policy included for direct delivery or later split into a standalone page.</p>
         </div>
         <div class="privacy">
           <p><strong>MeraCash</strong> (hereinafter referred to as "the App", "we" or "our company") highly values your privacy and information security. This Privacy Policy explains how we collect, use, store, protect, and share your information when you use our App. Please read this policy carefully before using the App.</p>
@@ -913,10 +712,10 @@
         </div>
       </div>
       <div class="footer-meta">
-        <p><strong>📧 客服邮箱 (Support Email):</strong> help@kalavritipri.com</p>
-        <p><strong>⏰ 服务时间 (Service Hours):</strong> 周一至周五，上午 9:00 - 下午 6:00 (IST)<br>*Monday - Friday, 9:00 AM - 6:00 PM (IST)*</p>
-        <p><strong>公司名称:</strong> KALAVRITI PRIVATE LIMITED</p>
-        <p><strong>注册地址:</strong> GC-52, Aditya Gold Crest, Vaibhav Khand, Indirapuram, Ghaziabad, Ghaziabad Uttar Pradesh, India, 201014</p>
+        <p><strong>Support Email:</strong> help@kalavritipri.com</p>
+        <p><strong>Service Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM (IST)</p>
+        <p><strong>Company Name:</strong> KALAVRITI PRIVATE LIMITED</p>
+        <p><strong>Registered Address:</strong> GC-52, Aditya Gold Crest, Vaibhav Khand, Indirapuram, Ghaziabad, Ghaziabad Uttar Pradesh, India, 201014</p>
       </div>
     </div>
   </footer>
@@ -924,7 +723,7 @@
   <div class="floating-bar">
     <div>
       <strong>MeraCash</strong>
-      <small>📧 help@kalavritipri.com · Monday - Friday, 9:00 AM - 6:00 PM (IST)<br>KALAVRITI PRIVATE LIMITED · Ghaziabad, Uttar Pradesh, India, 201014</small>
+      <small>help@kalavritipri.com · Monday - Friday, 9:00 AM - 6:00 PM (IST)<br>KALAVRITI PRIVATE LIMITED · Ghaziabad, Uttar Pradesh, India, 201014</small>
     </div>
     <div class="floating-actions">
       <a class="floating-pill" href="#about">About Us</a>
